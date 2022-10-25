@@ -1,4 +1,4 @@
-# aquauborka
+# mrcleaning.kz
 
 ## Project setup
 ```
