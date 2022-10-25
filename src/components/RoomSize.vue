@@ -1,7 +1,7 @@
 <template>
     <div v-if="mode === 'change'" class="mt-5 flex gap-2 items-center">
       <p>{{ room }}</p>
-      <input type="number" pattern="\d*" v-model="size" class="form-control block w-20 text center px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-orange-400 rounded-xl transition ease-in-outm-0 focus:text-gray-700 focus:bg-white focus:border-orange-600 focus:border-2 focus:outline-none" placeholder="кв м2">
+      <input type="number" pattern="\d*" v-model="size" class="form-control block md:w-24 w-20 text center px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-orange-400 rounded-xl transition ease-in-outm-0 focus:text-gray-700 focus:bg-white focus:border-orange-600 focus:border-2 focus:outline-none" placeholder="кв м2">
       <p>кв. м2</p>
       <button @click="save()" class="bg-orange-500 py-1 px-2 rounded-lg ml-2 hover:bg-orange-600">Добавить</button>
     </div>

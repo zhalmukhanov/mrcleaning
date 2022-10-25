@@ -740,6 +740,10 @@ video {
   width: 15rem;
 }
 
+.w-2 {
+  width: 0.5rem;
+}
+
 .rotate-90 {
   --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1535,6 +1539,10 @@ body {
 
   .md\:w-24 {
     width: 6rem;
+  }
+
+  .md\:w-20 {
+    width: 5rem;
   }
 
   .md\:rotate-0 {

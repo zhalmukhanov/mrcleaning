@@ -1,7 +1,7 @@
 <template>
   <section class="container mx-auto px-5 mt-20">
     <p class="md:text-4xl sm:text-3xl text-2xl font-bold text-orange-600 text-center">
-        Офармление заказа уборки
+        Оформление заказа уборки
     </p>
     <div class="w-full flex items-start mt-10 gap-10 lg:flex-row flex-col">
         <div class="xl:w-9/12 lg:w-8/12 w-full">
