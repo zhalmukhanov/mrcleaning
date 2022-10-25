@@ -1,0 +1,70 @@
+<template>
+  <div class="bg min-h-screen">
+    <header class="container mx-auto px-5">
+      <div class="flex items-center justify-between gap-5">
+        <div class="lg:w-36 md:w-24 sm:w-20 w-16 my-5 flex items-center">
+          <img src="../img/logo.png" class="w-full" alt="logo">
+        </div>
+        <div class="flex gap-7 text-base sm:text-lg lg:text-xl font-medium">
+          <button @click="$emit('goToOrder')" href="#" class="text-slate-50 hover:text-slate-200 hidden md:block">Услуги</button>
+          <button @click="$emit('goToSale')" class="text-slate-50 hover:text-slate-200 hidden md:block">-25% на мебель</button>
+          <a href="tel:+77073033322" class="text-slate-50 hover:text-slate-200">+7 (707) 303-33-22</a>
+          <p class="text-slate-50 hidden md:block">Пн-Вск: 9:00 - 21:00</p>
+        </div>
+      </div>
+    </header>
+    <div class="container mx-auto px-5 mt-10">
+      <h1 class="text-orange-600 lg:text-5xl md:text-4xl sm:text-4xl text-3xl font-bold xl:w-6/12 lg:w-8/12 sm:w-full w-full text-center md:text-left">
+        Профессиональная уборка
+        <span class="text-slate-100 font-medium">
+          квартир, домов, офисов и других помещений
+        </span>
+      </h1>
+      <div class="sm:mt-10 mt-8">
+        <div 
+          v-for="(data, idx) in dataCheckmark"
+          :key="idx"
+          class="flex gap-3 items-center mt-1"
+        >
+        <svg class="md:w-14 sm:w-12 w-10 fill-amber-300" viewBox="0 0 24 24"><path d="M16.15,5.47l-4.06,6.49l-0.2-0.41c-0.25-0.49-0.85-0.69-1.34-0.45c-0.49,0.25-0.69,0.85-0.45,1.34l1,2  c0.16,0.32,0.49,0.53,0.85,0.55c0.02,0,0.03,0,0.05,0c0.34,0,0.67-0.18,0.85-0.47l5-8c0.29-0.47,0.15-1.08-0.32-1.38  C17.06,4.86,16.44,5,16.15,5.47z"/><path d="M5.95,15.23l-0.93,5.61c-0.06,0.37,0.09,0.75,0.4,0.97c0.31,0.22,0.71,0.25,1.05,0.08L12,18.98l5.54,2.91  C17.68,21.96,17.84,22,18,22c0.21,0,0.41-0.06,0.59-0.19c0.31-0.22,0.46-0.6,0.4-0.97l-0.93-5.61l3.78-5.67  c0.2-0.31,0.22-0.7,0.05-1.03S21.37,8,21,8h-2c-0.55,0-1,0.45-1,1s0.45,1,1,1h0.13l-2.96,4.45c-0.14,0.21-0.2,0.47-0.15,0.72  l0.67,4.01l-4.22-2.21c-0.29-0.15-0.64-0.15-0.93,0l-4.22,2.21l0.67-4.01c0.04-0.25-0.01-0.51-0.15-0.72L4.87,10H9  c0.38,0,0.72-0.21,0.89-0.55l1.97-3.94l0.31,0.84c0.19,0.52,0.77,0.78,1.28,0.59c0.52-0.19,0.78-0.77,0.59-1.28l-1.11-3  C12.8,2.28,12.45,2.02,12.05,2c-0.41-0.02-0.77,0.2-0.95,0.55L8.38,8H3C2.63,8,2.29,8.2,2.12,8.53S1.96,9.25,2.17,9.55L5.95,15.23z"/></svg>
+        <p class="lg:text-3xl md:text-2xl sm:text-2xl text-xl text-slate-100 ">  
+            {{ data }}
+        </p>
+        </div>
+      </div>
+      <div class="w-full sm:mt-20 mt-14 flex justify-center md:justify-start">
+        <button @click="$emit('goToOrder')" class="bg-orange-600 mb-10 text-slate-50 md:px-8 md:py-3 md:pb-4 px-5 py-2 pb-3 rounded-lg md:text-3xl sm:text-2xl font-bold hover:bg-orange-700 hover:text-slate-200">
+            <p>
+              Заказать уборку
+            </p> 
+        </button>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<script>
+export default {
+  name: 'HeaderBanner',
+  data() {
+    return {
+      dataCheckmark: ['Уборка от 350 тг/м2', 'Выезжаем в течение часа', 'Работаем 24/7', 'Только безопасные средства уборки', 'Гарантия сохранности имущества']
+    }
+  }
+}
+</script>
+
+<style scoped>
+.bg {
+  background-image: url('../img/bannerBg.png');
+  background-size: cover;
+  background-position: 50% 0%;
+}
+
+@media (min-width: 768px){
+    .bg {
+      background-attachment: fixed;
+    }
+  }
+</style>
